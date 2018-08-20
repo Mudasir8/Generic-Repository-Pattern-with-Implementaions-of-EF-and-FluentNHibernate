@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Models.Student>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h1>Students</h1>
+
+<div class="row">
+    <a class="btn btn-default pull-right" href="/Student/AddNew">Add New</a>
+</div>
+
+<div class="row">
+
+    
+
+    <table class="table">
+        <thead><tr><th>First Name</th><th>Last Name</th><th>Process</th></tr></thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+               <tr><td>@item.FirstName</td><td>@item.LastName</td><td><a href="/Student/Details/@item.ID">Details</a></td></tr>
+            }
+
+        </tbody>
+    </table>
+
+
+</div>
