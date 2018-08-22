@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<script src="~/Scripts/Angualr/angular.min.js"></script>
+<script src="~/Scripts/Angualr/app.js"></script>
+
+<div ng-app="myApp">
+    <div ng-controller="myController">
+
+        <h1>Students</h1>
+
+        <div class="row">
+            <a class="btn btn-default pull-right" href="/Student/AddNew">Add New</a>
+        </div>
+
+        <div class="row">
+            <table class="table">
+                <thead><tr><th>First Name</th><th>Last Name</th><th>Process</th></tr></thead>
+                <tbody>
+                    <tr ng-repeat="item in studentList"><td>{{item.FirstName}}</td><td>{{item.LastName}}</td><td><a href="/Student/Details/{{item.ID}}">Details</a></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+</div>
