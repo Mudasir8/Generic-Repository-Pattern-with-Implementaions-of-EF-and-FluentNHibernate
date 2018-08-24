@@ -12,6 +12,10 @@ myApp.controller('myController', function MyController($scope, $http) {
             $scope.studentList = response.data;
         });
 
+    $scope.btnSubmitClick = function () {
+        alert("there")
+    }
+
     $scope.deleteStudent = function (id) {
         if (confirm("Are you sure do delete ?")) {
             // remove from server

@@ -161,6 +161,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\scripts\StudentService.js" />
+    <Content Include="app\student-add-new\student-add-new.template.html" />
     <Content Include="app\student-detail\student-detail.component.js" />
     <Content Include="app\student-detail\student-detail.module.js" />
     <Content Include="app\student-detail\student-detail.template.html" />
