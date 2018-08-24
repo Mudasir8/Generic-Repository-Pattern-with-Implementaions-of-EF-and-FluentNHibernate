@@ -31,7 +31,7 @@ namespace Presentation.Controllers
             {
                 return RedirectToAction("Index");
             }
-            return View(_unitOfWork.Students.GetByID(id.Value));
+            return View("Details", _unitOfWork.Students.GetByID(id.Value));
 
         }
 
