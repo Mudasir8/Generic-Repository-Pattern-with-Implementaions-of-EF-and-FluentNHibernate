@@ -33,3 +33,10 @@ myApp.controller('myController', function MyController($scope, $http) {
 
 
 }); // /controller
+
+// Temp for testing
+myApp.filter('reverse', function () {
+    return function (text) {
+        return text.length;
+    };
+});
