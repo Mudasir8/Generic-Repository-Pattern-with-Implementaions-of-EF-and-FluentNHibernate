@@ -7,3 +7,5 @@ EF Implementation
 Fluent NHibernate Implementation
 
 AutoFac DI
+
+Angular SPA
