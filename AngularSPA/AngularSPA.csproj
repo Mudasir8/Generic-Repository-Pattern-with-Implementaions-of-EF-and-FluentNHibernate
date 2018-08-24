@@ -164,6 +164,7 @@
     <Content Include="app\student-detail\student-detail.component.js" />
     <Content Include="app\student-detail\student-detail.module.js" />
     <Content Include="app\student-detail\student-detail.template.html" />
+    <Content Include="app\test\karma.conf.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />

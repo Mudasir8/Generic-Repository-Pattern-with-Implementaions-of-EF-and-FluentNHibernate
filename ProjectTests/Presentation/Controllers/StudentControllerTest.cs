@@ -27,6 +27,7 @@ namespace ProjectTests.Presentation.Controllers
             Student student = (Student) result.ViewData.Model;
             Assert.AreEqual("Waqar", student.FirstName);
 
+
         }
 
     }
