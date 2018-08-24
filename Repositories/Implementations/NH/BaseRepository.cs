@@ -19,6 +19,12 @@ namespace Repositories.Implementations.NH
             _session.Save(entity);
         }
 
+        public void DeleteByID(int id)
+        {
+
+            _session.Delete(_session.Get<T>(id));
+        }
+
         public IEnumerable<T> GetAllRecord()
         {
             return _session.Query<T>();

@@ -16,7 +16,10 @@
         <tbody>
             @foreach (var item in Model)
             {
-               <tr><td>@item.FirstName</td><td>@item.LastName</td><td><a href="/Student/Details/@item.ID">Details</a></td></tr>
+               <tr>
+            <td>@item.FirstName</td>
+            <td>@item.LastName</td>
+            <td><a href="/Student/Details/@item.ID">Details</a> </td></tr>
             }
 
         </tbody>

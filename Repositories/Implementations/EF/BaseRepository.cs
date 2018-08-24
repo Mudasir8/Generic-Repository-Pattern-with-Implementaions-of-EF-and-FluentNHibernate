@@ -22,6 +22,11 @@ namespace Repositories.Implementations.EF
             _context.Set<T>().Add(entity);
         }
 
+        public void DeleteByID(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<T> GetAllRecord()
         {
             return _context.Set<T>().ToList();

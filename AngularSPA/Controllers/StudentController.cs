@@ -1,4 +1,5 @@
 ﻿using Models;
+using Newtonsoft.Json;
 using Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -20,23 +21,16 @@ namespace AngularSPA.Controllers
 
         public ActionResult Index()
         {
-           // IEnumerable<Student> students = _unitOfWork.Students.GetAllRecord();
             return View();
         }
 
-
-        public ActionResult Details(int? id)
+        public string GetStudentByID(int? id)
         {
             if (!id.HasValue)
             {
-                return RedirectToAction("Index");
+                return null;
             }
-            return View(_unitOfWork.Students.GetByID(id.Value));
-        }
-
-        public ActionResult AddNew()
-        {
-            return View();
+            return Newtonsoft.Json.JsonConvert.SerializeObject(_unitOfWork.Students.GetByID(id.Value));
         }
 
         public string GetStudentsList()
@@ -44,7 +38,7 @@ namespace AngularSPA.Controllers
             return Newtonsoft.Json.JsonConvert.SerializeObject(_unitOfWork.Students.GetAllRecord().ToList());
         }
 
-        public bool AddNewStudent(string firtName, string lastName)
+        public string AddNewStudent(string firtName, string lastName)
         {
             try
             {
@@ -55,14 +49,30 @@ namespace AngularSPA.Controllers
                 };
                 _unitOfWork.Students.AddNewRecord(st);
                 _unitOfWork.CommitChanges();
-                return true;
+                return JsonConvert.SerializeObject(true);
             }
             catch (Exception)
             {
 
-                return false;
+                return JsonConvert.SerializeObject(false);
             }
 
+        }
+
+        public string DeleteStudentByID(int id)
+        {
+            try
+            {
+                _unitOfWork.Students.DeleteByID(id);
+                _unitOfWork.CommitChanges();
+                return JsonConvert.SerializeObject(true);
+            }
+            catch (Exception)
+            {
+
+                return JsonConvert.SerializeObject(false);
+            }
+            
         }
     }
 }

@@ -161,6 +161,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\student-detail\student-detail.component.js" />
+    <Content Include="app\student-detail\student-detail.module.js" />
+    <Content Include="app\student-detail\student-detail.template.html" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -169,8 +172,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\Angualr\angular.min.js" />
-    <Content Include="Scripts\Angualr\app.js" />
+    <Content Include="app\scripts\angular\angular-route.min.js" />
+    <Content Include="app\scripts\angular\angular.min.js" />
+    <Content Include="app\scripts\app.config.js" />
+    <Content Include="app\scripts\app.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -187,6 +192,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="app\templates\StudentList.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

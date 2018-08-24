@@ -16,6 +16,7 @@ namespace Repositories.Implementations.NH
             Students = new StudentRepository(_session);
         }
 
+
         public void CommitChanges()
         {
             _session.BeginTransaction().Commit();
@@ -25,5 +26,7 @@ namespace Repositories.Implementations.NH
         {
             _session.Dispose();
         }
+
+       
     }
 }

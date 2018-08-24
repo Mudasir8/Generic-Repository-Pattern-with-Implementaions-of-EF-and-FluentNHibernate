@@ -11,5 +11,6 @@ namespace Repositories.Interfaces
         T GetByID(int id);
         IEnumerable<T> GetAllRecord();
         void AddNewRecord(T entity);
+        void DeleteByID(int id);
     }
 }

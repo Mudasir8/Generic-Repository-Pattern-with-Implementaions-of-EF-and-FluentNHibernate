@@ -1,0 +1,19 @@
+﻿
+<h1>Students</h1>
+
+<div class="row">
+    <a class="btn btn-default pull-right" href="/Student/AddNew">Add New</a>
+</div>
+
+<div class="row">
+    <table class="table">
+        <thead><tr><th>First Name</th><th>Last Name</th><th>Process</th></tr></thead>
+        <tbody>
+            <tr ng-repeat="item in studentList">
+            <td>{{item.FirstName}}</td>
+            <td>{{item.LastName}}</td>
+            <td><a href="/Student#!/{{item.ID}}">Details</a> <a href="#" ng-click="deleteStudent(item.ID)">Delete</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
