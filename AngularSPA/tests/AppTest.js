@@ -1,7 +1,8 @@
 ﻿
 describe('App Tests', function () {
 
-    beforeEach(angular.mock.module('myApp'));
+    
+    beforeEach(angular.mock.module('myApp')); // ***************** have to resister before each test
 
     describe('reversestringfilterTest', function () {
 
@@ -17,5 +18,27 @@ describe('App Tests', function () {
 
     });
 
+    describe('cotroller test', function () {
+        var $controller;
+       // var $http;
+
+        beforeEach(angular.mock.inject(function (_$controller_) {
+            $controller = _$controller_;
+           // $http = _$http_;
+        }));
+
+        it('should return student list with lenth 3', function () {
+            var $scope = {};
+            var $http = {};
+            var controller = $controller('myController', { $scope: $scope, $http: $http });
+            $scope.startList();
+            alert($scope.studentList);
+            expect($scope.studentList.length).toBeDefined();
+
+        })
+
+    });
 
 });
+
+

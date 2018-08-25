@@ -4,17 +4,20 @@ var myApp = angular.module('myApp', [
     'studentDetail',
 ])
 
-myApp.controller('myController', function MyController($scope, $http) {
+myApp.controller('myController', function($scope, $http) {
 
     // get list from Student/GetStudentsList
-    $http.get("/Student/GetStudentsList")
-        .then(function (response) {
+
+    $scope.startList = function() {
+        $http({
+            url: '/Student/GetStudentsList',
+            method: 'GET',
+        }).then(function (response) {
             $scope.studentList = response.data;
         });
-
-    $scope.btnSubmitClick = function () {
-        alert("there")
     }
+
+    $scope.startList();
 
     $scope.deleteStudent = function (id) {
         if (confirm("Are you sure do delete ?")) {
