@@ -27,15 +27,17 @@ describe('App Tests', function () {
            // $http = _$http_;
         }));
 
-        it('should return student list with lenth 3', function () {
-            var $scope = {};
-            var $http = {};
-            var controller = $controller('myController', { $scope: $scope, $http: $http });
-            $scope.startList();
-            alert($scope.studentList);
-            expect($scope.studentList.length).toBeDefined();
 
-        })
+
+        //it('should return student list with lenth 3', function () {
+        //    var $scope = {};
+        //    var $http = {};
+        //    var controller = $controller('myController', { $scope: $scope, $http: $http });
+        //    $scope.startList();
+        //    alert($scope.studentList);
+        //    expect($scope.studentList.length).toBeDefined();
+
+        //})
 
     });
 
