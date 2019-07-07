@@ -1,4 +1,4 @@
-# Generic-Repository-Pattern-with-Implementaions-of-EF-and-FluentNHibernate
+# Generic-Repository-Pattern-with-Implementations-of-EF-and-FluentNHibernate
 
 Generic Repository Pattern
 
