@@ -1,6 +1,6 @@
 
 
-![Generic Repository Pattern](https://github.com/Mudasir8/MyS3ChatWeb/blob/master/MyS3Chat/Content/Images/MyS3ChatScreenShot.png)
+![Generic Repository Pattern](https://github.com/Mudasir8/Generic-Repository-Pattern-with-Implementaions-of-EF-and-FluentNHibernate/CRUD-using-the-Repository-Pattern-in-MVC-1.jpg)
 
 # Generic-Repository-Pattern-with-Implementations-of-EF-and-FluentNHibernate
 
